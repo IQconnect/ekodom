@@ -1,0 +1,13 @@
+.middlebutton {
+  padding: 0 0 $gutter * 8;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    padding: $gutter * 1 $gutter * 4;
+  }
+}

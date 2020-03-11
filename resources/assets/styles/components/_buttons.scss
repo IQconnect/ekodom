@@ -1,0 +1,21 @@
+.button {
+  &--primary {
+    padding: $gutter;
+    background-color: theme-color("special");
+    color: theme-color("light");
+    text-transform: uppercase;
+  }
+
+  &:hover,
+  &:focus {
+    color: #fff !important;
+  }
+
+  &:hover {
+    background-color: darken(theme-color("special"), 15%) !important;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}

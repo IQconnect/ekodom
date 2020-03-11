@@ -1,0 +1,74 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+// COLORS
+$theme-colors: (
+  light: #fff,
+  dark: #000,
+  greyy: #767676,
+  special: #ec1e27,
+  special-extra: #f0a202
+);
+
+// END COLORS
+
+$media: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
+);
+
+$transition: 0.4s !important;
+
+$font-size: (
+  headline: (
+    40pt,
+    20pt
+  ),
+  title: (
+    30pt,
+    20pt
+  ),
+  subheader: (
+    20pt,
+    14pt
+  ),
+  quote: (
+    20pt,
+    14pt
+  ),
+  body: (
+    14pt,
+    14pt
+  ),
+  secondary-body: (
+    12pt,
+    10pt
+  ),
+  placeholder: (
+    12pt,
+    10pt
+  ),
+  button: (
+    10pt,
+    10pt
+  )
+);
+
+$font-family: (
+  main: "Montserrat",
+  title: "Kanit"
+);
+
+$gutter: 10px;
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+$z-index: (
+  infobar: 200,
+  header: 100,
+  preloader: 300
+);

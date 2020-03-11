@@ -1,0 +1,51 @@
+p,
+ul,
+li,
+.text {
+  font-size: 17px;
+  margin: 0;
+
+  &--medium {
+    font-size: 20px;
+  }
+
+  &--major {
+    font-size: 20px;
+
+    @include media(sm) {
+      font-size: 25px;
+    }
+  }
+
+  &--small {
+    @include cssLock("font-size", 360, 1700, (12, 17));
+
+    color: theme-color("special");
+  }
+
+  &--special {
+    font-family: "Teko", sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+
+  &--special-color {
+    color: map-get($theme-colors, "special");
+  }
+
+  &--bold {
+    font-weight: 800;
+  }
+
+  &--semi-bold {
+    font-weight: 500;
+  }
+}
+
+.txt {
+  padding: $gutter * 2;
+  font-size: 30pt;
+  text-align: center;
+  font-weight: 700;
+  color: theme-color("special");
+}

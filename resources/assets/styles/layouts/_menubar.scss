@@ -1,0 +1,34 @@
+.menubar {
+  padding: $gutter * 5 0 $gutter * 5;
+
+  &__wrapper {
+    display: grid;
+    text-align: center;
+    gap: $gutter;
+
+    @include media(md) {
+      grid-template-columns: repeat(20, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $gutter * 2;
+    grid-column: auto/span 5;
+
+    @include media(md) {
+      grid-column: auto/span 5;
+    }
+
+    &:nth-child(n + 5) {
+      grid-column: auto/span 5;
+
+      @include media(md) {
+        grid-column: auto/span 4;
+      }
+    }
+  }
+}

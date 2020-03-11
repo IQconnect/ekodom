@@ -1,0 +1,84 @@
+.products {
+  padding: ($gutter * 5) 0;
+  $root: &;
+
+  &--rev {
+    #{$root}__content {
+      order: -1;
+
+      @include media(sm) {
+        order: -1;
+      }
+    }
+  }
+
+  &__image-wrapper {
+    order: 0;
+  }
+
+  &__button {
+    padding-top: $gutter * 1;
+  }
+
+  &__description {
+    display: none;
+    position: absolute;
+
+    &.-is-active {
+      pointer-events: initial;
+      animation: showtab 0.4s ease-in both;
+      display: inline-block;
+    }
+
+    &.-on-hold {
+      animation: hidetab 0.5s ease-in both;
+      pointer-events: none !important;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    margin-top: $gutter * 2;
+
+    @include media(sm) {
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+      margin-top: 0;
+    }
+  }
+
+  &__content {
+    order: -1;
+    display: none;
+
+    @include media(sm) {
+      order: 0;
+      display: inherit;
+    }
+  }
+}
+
+@keyframes showtab {
+  0% {
+    opacity: 0;
+    transform: translateX(-$gutter * 5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hidetab {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX($gutter * 30);
+  }
+}

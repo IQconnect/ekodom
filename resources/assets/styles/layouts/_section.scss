@@ -1,0 +1,23 @@
+.section {
+  $root: &;
+
+  &__header {
+    position: relative;
+    text-align: center;
+    padding: ($gutter * 2.5) 0;
+
+    @include media(md) {
+      padding: ($gutter * 5) 0;
+    }
+
+    &::before {
+      @extend .absolute;
+
+      content: "";
+      bottom: unset;
+      width: 100px;
+      height: 2px;
+      background-color: theme-color("special");
+    }
+  }
+}

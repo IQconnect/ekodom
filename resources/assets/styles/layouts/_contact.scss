@@ -1,0 +1,14 @@
+.contact {
+  width: 100%;
+  padding: 0 ($gutter * 1.5);
+
+  &__content {
+    margin: $gutter * 6 0;
+  }
+
+  &__hover {
+    &:hover {
+      color: theme-color("special") !important;
+    }
+  }
+}

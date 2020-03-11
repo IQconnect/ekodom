@@ -1,0 +1,82 @@
+.realisation {
+  padding: ($gutter * 3) 0 ($gutter * 8);
+  $root: &;
+
+  &__menu {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+
+    @include media(sm) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 10px;
+    }
+  }
+
+  &__box {
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 5px 5px 4px (theme-color("greyy"));
+
+    @include media(sm) {
+      margin-top: 0;
+      height: 300px;
+    }
+  }
+
+  &__image {
+    transition: transform 1s ease, filter 2s ease !important;
+    height: 30vh;
+    width: 100%;
+    object-fit: cover;
+
+    @include media(sm) {
+      height: 100%;
+      width: 100%;
+      margin-top: 0;
+      filter: brightness(50%);
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding: $gutter;
+    position: absolute;
+    background-color: theme-color("special");
+    color: theme-color("light");
+    text-transform: uppercase;
+    transition: background-color 0.5s !important;
+    bottom: 0;
+
+    @include media(md) {
+      width: 30%;
+      bottom: -$gutter * 2.3;
+    }
+
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &__cat {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    :hover {
+      #{$root}__image {
+        transform: scale(1.5);
+        filter: brightness(100%);
+      }
+
+      #{$root}__button {
+        background-color: darken(theme-color("special"), 15%);
+      }
+    }
+  }
+}

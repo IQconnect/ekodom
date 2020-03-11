@@ -1,0 +1,44 @@
+.hero {
+  position: relative;
+  max-height: 100vh;
+  padding-top: $gutter * 14;
+  height: $gutter * 40;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: map-get($theme-colors, "special_dark");
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: map-get($theme-colors, "light");
+    opacity: 0.8;
+  }
+
+  &__content {
+    z-index: 20;
+  }
+
+  &--dark {
+    color: map-get($theme-colors, "light");
+
+    &::before {
+      background-color: map-get($theme-colors, "dark");
+    }
+  }
+
+  &--special {
+    color: map-get($theme-colors, "light");
+
+    &::before {
+      background-color: map-get($theme-colors, "special_dark");
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.content-section {
+  padding: ($gutter * 5) ($gutter * 1);
+
+  @include media(sm) {
+    padding: ($gutter * 5) 0;
+  }
+}
